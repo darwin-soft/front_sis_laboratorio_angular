@@ -1,0 +1,5 @@
+12. Curso Laravel y Angular - Proyecto día 6 - Instalación y estructura Angular
+https://www.youtube.com/watch?v=SpoSw91iAus&t=7s
+
+Curso Laravel y Angular - Proyecto día 7 - Módulos ReactiveForm, HttpCliente y Login con Laravel
+https://www.youtube.com/watch?v=eJiTxwoU92I&t=2s
