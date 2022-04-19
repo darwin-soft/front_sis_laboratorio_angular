@@ -1,1 +1,11 @@
 <h1>Iniciar Sesión</h1>
+
+<form form [formGroup]="loginForm">
+    <input type="password" formControlName="email">
+    <br>
+    <input type="password" formControlName="password">
+    <br>
+    <button type="button" (click)="ingresar()" [disabled]="!loginForm.valid">Ingresar</button>
+</form>
+
+<hr> {{loginForm.value | json}}
