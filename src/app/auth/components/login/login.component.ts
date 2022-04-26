@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from '../../../core/services/login.service';
+import { LoginService } from 'src/app/core/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -23,11 +23,20 @@ export class LoginComponent implements OnInit {
       (res: any)=>{
         console.log(res);
         localStorage.setItem("token", res.accessToken)
+
+        this.LoginService.getPerfil().subscribe(
+          (res: any)=>{
+            console.log(res);
+          }
+        )
+        alert("Bienvenido..")
       },
       (error:any)=>{
         console.log(error);
-        if(error.status === 401)
-        alert("Credenciales Incorectas!")
+        if(error.status === 401){
+          alert("Credenciales Incorectas!")
+        }
+        
       }
     )
   }

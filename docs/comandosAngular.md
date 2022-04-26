@@ -14,3 +14,11 @@ ng g m core
 ## Servicios
 
 ng g s core/services/login
+
+## guards
+
+ng g g guards/auth
+
+## Interceptor
+
+ng g interceptor interceptor
