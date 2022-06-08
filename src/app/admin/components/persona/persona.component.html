@@ -1,0 +1,28 @@
+<h1>Personasss</h1>
+
+<p-table [value]="lista_personas" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>NOMBRES</th>
+            <th>APELLIDOS</th>
+            <th>CEDULA</th>
+            <th>TELEFONO</th>
+            <th>CIUDAD</th>
+            <th>CUENTA</th>
+            <th>ACCIONES</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-persona>
+        <tr>
+            <td>{{persona.nombres}}</td>
+            <td>{{persona.apellidos}}</td>
+            <td>{{persona.cedula}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.ciudad}}</td>
+            <td>{{persona.cuenta}}</td>
+            <td>
+                <p-button (click)="showDialogNuevoPaciente(persona)">editar</p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

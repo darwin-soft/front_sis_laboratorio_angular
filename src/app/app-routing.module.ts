@@ -12,8 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: InicioComponent,
-        canActivate: [AuthGuard]
+        component: InicioComponent,     
       },
       {
         path: 'auth',
@@ -25,8 +24,9 @@ const routes: Routes = [
   {
     path:'admin',
     component: AppMainComponent,
+    canActivate: [AuthGuard],
     children:[{
-      path: 'admin',
+      path: '',
       loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
       canActivate: [AuthGuard]
     }
